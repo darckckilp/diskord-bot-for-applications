@@ -55,10 +55,10 @@ class Recruitement(commands.Cog):
 
     @commands.slash_command()
     async def recruit(self, ctx):
-        """Набор в команду."""
+        """team recruitment."""
         view = disnake.ui.View()
         view.add_item(RecruitementSelect())
-        await ctx.send('Выбери роль на которую хотите пойти.\n**                    !!ВНИМАНИЕ!!**\nЗа **повторную** или **шуточную** заявку\nвы получите мьют на **две или более недель**', view=view)
+        await ctx.send('Выбери роль на которую хотите пойти.\n**ATTENTION!!/n **For** repeated **or** joking requests, you will receive a mute for **two or more weeks**', view=view)
 
     @commands.Cog.listener()
     async def on_connect(self):
